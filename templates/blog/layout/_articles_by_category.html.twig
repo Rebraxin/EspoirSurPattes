@@ -1,0 +1,67 @@
+{# Start Actualité Section  #}
+<div class="container-fluid">
+    <div class="container padding-section px-3">
+        <div class="content-section">
+            <h2 class="display-5 ">Articles de la catégorie {{ category.name|capitalize }}</h2>
+            <div class="custom-underline my-4"></div>
+        </div>
+    </div>
+</div>
+{# End Actualité Section  #}
+
+{# Start Categories  #}
+<div class="container p-3 padding-section">
+
+    {# Counter of articles #}
+    {# <div class="count">
+        {{ articles.getTotalItemCount }}
+    </div> #}
+    
+    {# Start Loop Card Article  #}
+    {% for article in articles %}
+    {% set img_link = article.getMedia().getImgLink() %}
+
+    <div class="card card-article my-5">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <div class="card crop-picture carousel-img ">
+                    <img class="image" src="{{ asset('uploads/' ~ img_link) }}" alt="Article Pictures"/>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body card-body-article py-0">
+                    {% for category in article.categories %}
+                        <span class="badge badge-article mb-3"><a href="{{ path('article_list_by_category', {id: category.id}) }}">{{ category.name|capitalize }}</a></span>
+                    {% endfor %}
+                    
+                    
+                    <div class="crop-logo">
+                        <img class="" src="{{ asset('images/avatar/LogoRondDefinitif.png')}}" alt=""/>
+                        <a class="navbar-brand" href="#"></a>
+                    </div>
+                    <p class="card-text text-muted date-article">
+                        <small class="text-muted">
+                        <i class="far fa-clock"></i>
+                        {% if article.updatedAt %}
+                        <i class="far fa-clock"></i>Mis à jour le  : {{ article.updatedAt|date("d/m/Y") }}
+                        {% elseif article.createdAt %}
+                        Posté le  : {{ article.createdAt|date("d/m/Y") }}
+                        {% endif  %}
+                        <i class="far fa-user ml-2"></i> {{ article.user.userName }}
+                        <i class="far fa-comment ml-2"></i> {{ article.comments|length }} Commentaires
+                        </small></p>
+                    <h5 class="card-title font-weight-bold ">{{ article.title|capitalize }}</h5>
+                    <p class="card-text box--responsive-article">{{ article.content }}</p>
+                    <a href="{{ path('article_view', {slug: article.slug}) }}" class="btn btn-article">Lire la suite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {# End Loop Card Article  #}
+    <div class="navigation">
+        {{ knp_pagination_render(articles) }}
+    </div>
+</div>
+{# End Categories #}

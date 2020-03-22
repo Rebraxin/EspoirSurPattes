@@ -1,0 +1,141 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espoir sur Pattes | Ajouter un animal{% endblock %}
+
+{% block body %}
+
+    {% include "animal/layout/_form_banner.html.twig" %}
+
+    {{ form_start(formAnimal, {'attr': {'class': 'container px-0 animal-form-container'}}) }}
+        <div class="login-container-children">
+            <div class="shadow-login-form">
+                <div class="login-form-header text-center">
+                    <div class="circle-icon-signup d-inline-flex">
+                        <i class="far fa-address-card"></i>            
+                    </div>
+                    <h2>déclarer un animal</h2>        
+                </div>
+
+                <div class="border-outter">
+
+                    {{ form_widget(formAnimal.type, {
+                        'attr': {
+                            'class': 'select-rows mt-1',
+                        }
+                    }) }}
+
+                    <div class="form-error">
+                        {{ form_errors(formAnimal.name) }}
+                        {{ form_widget(formAnimal.name, {
+                            'attr': {
+                                'placeholder': 'Nom de l\'animal',
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}
+                    </div>
+
+                    <div class="form-error">
+                        {{ form_errors(formAnimal.age) }}
+                        {{ form_widget(formAnimal.age, {
+                            'attr': {
+                                'placeholder': 'Age de l\'animal',
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}
+                    </div>
+
+                    <div class="form-error">
+                        {{ form_errors(formAnimal.area) }}
+                        {{ form_widget(formAnimal.area, {
+                            'attr': {
+                                'placeholder': 'Quartier / Secteur',
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}
+                    </div>
+
+                    <div class="form-error">
+                        {{ form_errors(formAnimal.city) }}
+                        {{ form_widget(formAnimal.city, {
+                            'attr': {
+                                'placeholder': 'Ville',
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}
+                    </div>
+
+                    {{ form_widget(formAnimal.department, {
+                        'attr': {
+                            'class': 'select-rows mt-1',
+                        }
+                    }) }}
+
+                    <div class="form-error select-rows border-0 mt-1">
+                        {{ form_errors(formAnimal.image) }}
+                        {{ form_widget(formAnimal.image, {
+                            'attr': {
+                                'placeholder': 'Selectionner un fichier',
+                                'class': 'custom-file-label',
+                            }
+                        }) }}
+                    </div>               
+
+                    <div class="form-error">
+                        {{ form_errors(formAnimal.description) }}
+                        {{ form_widget(formAnimal.description, {
+                            'attr': {
+                                'placeholder': 'Description / Signes particuliers',
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}
+                    </div>
+
+                    <div class="row no-gutters">
+
+                        {{ form_widget(formAnimal.identification, {
+                            'attr': {
+                                'class': 'select-rows border-0 mt-1 col-lg-4',
+                            }
+                        }) }}
+
+                        {{ form_widget(formAnimal.status, {
+                            'attr': {
+                                'class': 'select-rows border-0 mt-1 col-lg-4',
+                            }
+                        }) }}
+
+                        {{ form_widget(formAnimal.sex, {
+                            'attr': {
+                                'class': 'select-rows border-0 mt-1 col-lg-4',
+                            }
+                        }) }}
+                    
+                    </div>
+
+                    <div class="login-btn-holder text-center">
+                        {{ form_widget(formAnimal.Enregistrer, {
+                            'label': 'Enregistrer',
+                            'attr': {
+                                'class': 'select-rows form-btn',
+                                'type': 'submit'
+                            }
+                        }) }}
+                    </div>
+                    <input type="hidden" id="g-token" name="gtoken">
+                </div>
+                <div class="footer-login-form"></div>
+            </div>
+
+        </div>
+
+    {{ form_end(formAnimal) }}
+<script src="https://www.google.com/recaptcha/api.js?render=6LcMPuIUAAAAAD6MCAn6blNVI7M5VKHZ_YXnN1KB"></script>
+<script>
+grecaptcha.ready(function() {
+	grecaptcha.execute('6LcMPuIUAAAAAD6MCAn6blNVI7M5VKHZ_YXnN1KB', {action: 'homepage'}).then(function(token) {
+		document.getElementById("g-token").value = token
+	});
+});
+</script>
+
+{% endblock %}

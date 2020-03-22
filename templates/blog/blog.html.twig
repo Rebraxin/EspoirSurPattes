@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block body %}
+
+{% include "blog/layout/_blog_banner.html.twig" %} 
+
+{% include "main/layout/_widget.html.twig" %}
+
+{% include "blog/layout/_actus.html.twig" %}    
+
+{% include "blog/layout/_categories_choice.html.twig" %}    
+
+{% endblock %}

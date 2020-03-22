@@ -1,0 +1,36 @@
+{# Start AnimalAlert Section #}
+<div class="container padding-section">
+	<div class="text-center content-section">
+		<h2 class="display-5 mt-4">Derniers animaux signalés</h2>
+		<div class="custom-underline mx-auto my-4"></div>
+		<p class="lead w-75 mx-auto">
+			Voici la liste des derniers animaux signalés, si vous souhaiter consulter la liste complète, accéder a la carte.
+            Si vous souhaitez signaler un animal, accédez au formulaire d'inscription.
+		</p>
+	</div>
+	{# Start Carousel #}
+	<div class="owl-carousel owl-theme text-center pt-4">
+		{% for animalAlert in animalsAlert %}
+		{# Start Card #}
+		
+		<div class="card m-2">
+			<div class="crop-picture carousel-img d-flex align-items-center mb-2">
+				<img class="image" src="{{ asset('uploads/' ~ animalAlert.image) }}" alt="Animal Image"/>
+				<div class="overlay"></div>
+			</div>
+			<div class=" card-body px-0 pb-0 card-deco card-body-carousel">
+				<h5 class="card-title font-weight-bold text-capitalize">{{ animalAlert.type.name }} {{ animalAlert.status }}</h5>
+				<h5 class="card-title">Département : <small>{{ animalAlert.department.name }}</small></h5>
+				<h5 class="card-title">Ville : <small>{{ animalAlert.city }}</small></h5>
+				<p>Date : {{ animalAlert.createdAt.date|date("d/m/Y") }} </p>
+				{# <p class="card-text px-3 pb-3">{{ animalAlert.description }}</p> #}
+				<a href="{{ path('animal_view', {id: animalAlert.id}) }}" class="btn py-3 btn-link">En savoir plus</a>
+			</div>
+		</div>
+		
+		{# End Card #}
+		{% endfor %}	
+    </div>  
+    {# End Carousel #}
+</div>
+{# End AnimalAlert Section #}

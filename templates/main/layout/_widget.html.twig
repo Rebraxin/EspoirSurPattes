@@ -1,0 +1,24 @@
+{# Start Widget  #}
+<div class="container-fluid pb-4">
+    <div class="container widget-home-parent d-flex justify-content-center">
+        <div class="row widget-home-banner">
+            {% for typeForWidget in typesForWidget %}
+            <div class="card card-widget-home col-sm-12 col-lg-4">
+                <a href="{{ path('animal_list_by_type', {id:typeForWidget.id}) }}" class="card-body anchor-widget d-flex align-items-center justify-content-center card-body-widget-home">
+                    <span class="card-text span-link">Adopter un {{typeForWidget.name}} 
+                    {% if typeForWidget.name == "chien" %}
+                    <i class="fas fa-dog ml-2"></i></<i>
+                    {% endif  %}
+                    {% if typeForWidget.name == "chat" %}
+                    <i class="fas fa-cat ml-2"></i></span>
+                    {% endif  %}
+                    {% if typeForWidget.name == "oiseau" %}
+                    <i class="fas fa-crow ml-2"></i></span>
+                    {% endif  %}      
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{# End Widget  #}

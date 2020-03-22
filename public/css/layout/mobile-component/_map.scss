@@ -1,0 +1,52 @@
+.map{
+    overflow: hidden;
+}
+li{
+    list-style-type: none;
+}
+
+.map__image{
+    width: 60%;
+    float:left;
+}
+.map__list{
+    width: 40%;
+    float:right;
+    font-family: var(--main-text-font);
+
+    ul {
+        text-align: center;
+        padding: .8rem;
+        margin-top: 1.5rem;
+    }
+}
+
+.map__image svg{
+    width: 90%;
+
+}
+
+.map__image path{
+    fill: var(--main-main-color);
+    stroke : #FFF;
+    stroke-width: 1px;
+    transition: fill 0.3s;
+}
+
+.map__image .is-active path{
+    fill: var(--main-clear-color);
+}
+
+
+.map__list a{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.map__list a.is-active{
+    color: var(--main-clear-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+

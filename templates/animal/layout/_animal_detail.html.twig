@@ -1,0 +1,76 @@
+{# Start Animal Solo #}
+<div class="container container-fluid mb-5">
+    <div class="row no-gutters">
+        <div class="col-sm-12 col-md-6 m-auto p-3">
+            <div class="portfolio-item">
+                <a href="{{ asset('uploads/' ~ animal.image) }}" data-lightbox="example-set" data-title="Photo de l'animal">
+                    <div class="card example-image-lightbox crop-lightbox lightbox-img">
+                        <img class="image" src="{{ asset('uploads/' ~ animal.image) }}" alt=""/>
+                        <div class="overlay-lightbox d-flex justify-content-center align-items-center">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card border-0 text-center">
+        <div class="card-body border-0">
+            {% if is_granted('ROLE_USER') %}
+            {% if is_granted ('update', animal) %}
+            <button class=" text-right" type="button"><a class="text-muted" href="{{ path('update_animal',{id:animal.id}) }}">Editer<i class="fas fa-pencil-alt ml-1"></i></a></button>
+            {% endif %}
+            {% if is_granted ('update', animal) %}
+            <button class=" text-right" onclick="return confirm('Confirmez la suppression ?')" type="button"><a class="text-muted" href="{{ path('delete_animal',{id:animal.id}) }}">Supprimer<i class="far fa-trash-alt ml-1"></i></a></button>
+            votre annonce
+            {% endif %}
+            {% endif %}
+
+            </div>
+            <div class="card-body border-0">  
+            <h5 class="card-title">Type : {{ animal.type.name }} </h5>
+            <p class="text-muted m-0">Nom : {{ animal.name }}</p>
+            <p class="text-muted m-0">Date : {{ animal.createdAt|date("d/m/Y") }}</p>
+            <p class="text-muted m-0">Sexe : {{ animal.sex }}</p>
+            <p class="text-muted">Age : {{ animal.age }} an(s)</p>
+            <p class="card-text m-auto w-75">Informations : {{ animal.description }}</p>
+        </div>
+        <div class="card-footer border-top-0 bg-white text-muted">
+            {% if animal.user.userName is defined %}
+                {% set user = animal.getUser().getUserName() %}
+                
+                {% if animal.status == "adoption" %}
+                    Proposé a l'adoption  par {{ user }} 
+                {% endif  %}
+
+                {% if animal.status == "trouvé" %}
+                     Trouvé le {{ animal.createdAt|date("d/m/Y") }} par {{ user }}
+                {% endif  %} 
+
+                {% if animal.status == "perdu" %}
+                     Perdu le {{ animal.createdAt|date("d/m/Y") }} par {{ user }} 
+                {% endif  %}
+                {% endif  %} 
+                à {{ animal.city }} ({{ animal.department.name }}) 
+                {% if animal.area %}
+                dans le secteur/quartier :  {{ animal.area }}
+                {% endif  %} 
+            </div>
+             {% if animal.status == "adoption" %}
+                <p class="text-footer-login-form text-center">Vous souhaitez des renseignements sur cet animal ? <a href="{{ path ('contact') }}">Contactez nous! </a></p>
+            {% endif  %}
+            {% if animal.status == "trouvé" %}
+                {% if animal.user.userName is defined %}
+                {# {% set user = animal.getUser().getUserName() %} #}
+                    <p class="text-footer-login-form text-center">C'est votre animal ? <a href="{{ path ('contact') }}">Contactez nous!</a></p>
+                {% endif  %} 
+            {% endif  %} 
+            {% if animal.status == "perdu" %}
+                <p class="text-footer-login-form text-center">Vous avez vu ou accueilli cet animal ? <a href="{{ path ('contact') }}">Contactez nous !</a></p>
+            {% endif  %}    
+        </div>
+    </div>
+</div> 
+{# End Animal Solo #}

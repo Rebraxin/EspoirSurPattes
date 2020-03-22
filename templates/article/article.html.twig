@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ article.title}}
+{% endblock %}
+
+{% block body %}
+
+	{% include "blog/layout/_blog_banner.html.twig" %}
+
+	{% include "main/layout/_widget.html.twig" %}
+
+	{% include "article/layout/_article_and_comment.html.twig" %}
+
+{% endblock %}
+

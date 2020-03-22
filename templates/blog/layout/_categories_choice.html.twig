@@ -1,0 +1,41 @@
+{# Start Categories  #}
+<div class="container py-4 px-2 padding-section">
+	<div class="text-center content-section">
+		<h2 class="display-5 mt-3">Categories</h2>
+		<div class="custom-underline mx-auto my-4"></div>
+	</div>
+    {# Card All article  #}
+	<div class="d-flex flex-wrap justify-content-center">
+		<div class="card mx-2 mb-4" style="width: 350px">
+			<div class="crop-picture carousel-img d-flex align-items-center mb-2">
+				<img class="image" src="{{ asset('images/categories/all.jpg') }}" alt=""/>
+				<div class="overlay"></div>
+			</div>
+			<div class="card-body px-0 pb-0 text-center card-deco card-body-carousel">
+				<h5 class="card-title font-color box--fixed one-line font-weight-bold">Tout les articles</h5>
+				<p class="card-text box--responsive px-3 pb-3">
+					Lollipop I love halvah danish pie jelly beans. Cheesecake croissant chocolate bar marshmallow pudding powder sugar plum caramels. Fruitcake danish gingerbread tiramisu cheesecake jelly-o ice cream jujubes. Cake croissant cookie. Halvah halvah chocolate bar gummies brownie candy caramels. Sweet sweet roll dessert carrot cake marzipan gingerbread chocolate. Sweet apple pie powder chocolate. Cotton candy jelly biscuit jujubes. Chocolate bar jelly pie cookie toffee pudding. Jelly-o tootsie roll I love bear claw cake lollipop. Gummies bear claw wafer tart croissant. Gingerbread cookie sesame snaps bonbon gingerbread ice cream gummi bears. Jelly-o chocolate bar pastry cookie carrot cake soufflé.
+				</p>
+				<a href="{{ path ('article_list')}}" class="btn py-3 btn-link">Voir tout les articles</a>
+			</div>
+		</div>
+		{# Start Loop Categories  #}
+		{% for category in categories %}
+			<div class="card mx-2 mb-4" style="width: 350px">
+				<div class="crop-picture carousel-img d-flex align-items-center mb-2">
+					<img class="image" src="{{ asset ('images/categories/' ~ category.name ~ '.jpg') }}" alt=""/>
+					<div class="overlay"></div>
+				</div>
+				<div class="card-body px-0 pb-0 text-center card-deco card-body-carousel">
+					<h5 class="card-title font-color box--fixed one-line font-weight-bold text-capitalize">{{ category.name}}</h5>
+					<p class="card-text box--responsive px-3 pb-3">
+						Lollipop I love halvah danish pie jelly beans. Cheesecake croissant chocolate bar marshmallow pudding powder sugar plum caramels. Fruitcake danish gingerbread tiramisu cheesecake jelly-o ice cream jujubes. Cake croissant cookie. Halvah halvah chocolate bar gummies brownie candy caramels. Sweet sweet roll dessert carrot cake marzipan gingerbread chocolate. Sweet apple pie powder chocolate. Cotton candy jelly biscuit jujubes. Chocolate bar jelly pie cookie toffee pudding. Jelly-o tootsie roll I love bear claw cake lollipop. Gummies bear claw wafer tart croissant. Gingerbread cookie sesame snaps bonbon gingerbread ice cream gummi bears. Jelly-o chocolate bar pastry cookie carrot cake soufflé.
+					</p>
+					<a href="{{ path('article_list_by_category', {id: category.id}) }}" class="btn py-3 btn-link">Voir tout les articles</a>
+				</div>
+			</div>
+			{# End Loop Categories  #}
+		{% endfor %}
+	</div>
+</div>
+{# End Categories  #}

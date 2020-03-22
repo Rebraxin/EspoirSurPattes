@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/template.css" />
+        <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.css"/>
+        <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css"/>
+        <link rel="stylesheet" href="../css/waypoints.css">
+    </head>
+    <body>
+        
+        <!-- End Home Section -->
+        <div id="home">
+            <!-- Start Nav -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
+                <div class="container navbar-contain">
+                    <div class="crop-logo ml-2">
+                        <img class="my-2" src="../images/brand/testlogo-purple.png" alt=""/>
+                        <a class="navbar-brand" href="#">EspoirSurPattes</a>
+                    </div>
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item ml-auto">
+                                <a class="nav-link" href="#">PetAlert</a>
+                            </li>
+                            <li class="nav-item ml-auto">
+                                <a class="nav-link" href="#">Adoption</a>
+                            </li>
+                            <li class="nav-item ml-auto">
+                                <a class="nav-link" href="#">News</a>
+                            </li>
+                            <li class="nav-item ml-auto">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="login-holder d-flex flex-column align-items-end d-lg-block">
+                            <button class="btn-login pr-3 mt-2 mb-1" type="submit">Connexion</button>
+                            <button class="btn-login pr-3 mb-2 mt-1" type="submit">Inscription</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Nav -->
+
+            <!-- Start Banner -->
+            <div class="banner-headline  d-flex flex-column justify-content-center">
+                <div class="container">
+                    <div class="card card-banner">
+                        <div class="card-body card-banner text-center d-lg-flex flex-lg-column align-items-lg-end justify-content-lg-center">
+                            <h5 class="card-title">Vous avez perdu votre pet ?</h5>
+                            <p class="card-text px-3 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Banner -->
+        </div>
+        <!-- End Home Section -->
+
+        <!-- Start QuiSommes Jumbotron -->
+        <div class="jumbotron jumbotron-fluid pb-4">
+            <div class="container widget-parent d-flex justify-content-center">
+                <div class="row widget-banner">
+                    <div class="card card-widget col-sm-12 col-lg-4">
+                        <div class="card-body d-flex align-items-center justify-content-center card-body-widget">
+                            <p class="card-text">Adopte un chien <i class="fas fa-dog"></i></p>
+                        </div>
+                    </div>
+                    <div class="card card-widget col-sm-12 col-lg-4">
+                        <div class="card-body d-flex align-items-center justify-content-center card-body-widget">
+                            <p class="card-text">Adopte un chien <i class="fas fa-cat"></i></p>
+                        </div>
+                    </div>
+                    <div class="card card-widget col-sm-12 col-lg-4">
+                        <div class="card-body d-flex align-items-center justify-content-center card-body-widget">
+                            <p class="card-text">Adopte un chien <i class="fas fa-crow"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container padding-section">
+                <div class="home-about-section content-section text-center">
+                    <div class="crop-avatar">
+                        <img class="my-4" src="../images/brand/testlogo-purple.png" alt=""/>
+                    </div>
+                    <h2 class="display-5">Qui somme nous ?</h2>
+                    <div class="custom-underline mx-auto my-4"></div>
+                    <p class="lead w-75 mx-auto">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Sit molestias totam culpa quos ad laborum saepe,
+                        aperiam laudantium vero eaque quisquam nesciunt, tempora
+                        quas repudiandae nulla voluptas blanditiis veritatis
+                        porro eius modi. Iusto sapiente mollitia officiis
+                        cupiditate ullam sequi voluptatibus?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- End QuiSommes Jumbotron -->
+        
+        <!-- Start AnimalAlert Section -->
+        <div class="container padding-section">
+            <div class="text-center content-section">
+                <h2 class="display-5 mt-4">Derniers animaux signalés</h2>
+                <div class="custom-underline mx-auto my-4"></div>
+                <p class="lead w-75 mx-auto">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Sit molestias totam culpa quos ad laborum saepe, aperiam
+                    laudantium vero eaque quisquam nesciunt, tempora quas
+                    repudiandae nulla voluptas blanditiis veritatis porro eius
+                    modi. Iusto sapiente mollitia officiis cupiditate ullam
+                    sequi voluptatibus?
+                </p>
+            </div>
+            <!-- Start Carousel -->
+            <div class="owl-carousel owl-theme text-center pt-4">
+                <!-- Start Card -->
+                <div class="card m-2">
+                    <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                        <img class="image" src="../images/pet_images/Oiseaux4.jpg" alt="Donald Duck"/>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text px-3 pb-3">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                    </div>
+                </div>
+                <!-- End Card -->
+
+                <!-- Start Card -->
+                <div class="card m-2">
+                    <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                        <img class="image" src="../images/pet_images/Chiens1.jpg" alt="Donald Duck">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text px-3 pb-3">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                    </div>
+                </div>
+                <!-- End Card -->
+
+                <!-- Start Card -->
+                <div class="card m-2">
+                    <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                        <img class="image" src="../images/pet_images/Autre1.jpg" alt="Donald Duck">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text px-3 pb-3">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                    </div>
+                </div>
+                <!-- End Card -->
+
+                <!-- Start Card -->
+                <div class="card m-2">
+                    <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                        <img class="image" src="../images/pet_images/Lapin3.jpg" alt="Donald Duck">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text px-3 pb-3">
+                            Some quick example text to build on the card
+                            title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                    </div>
+                </div>
+                <!-- End Card -->
+            </div>
+            <!-- End Carousel -->
+        </div>
+        <!-- End AnimalAlert Section -->
+
+        <!-- Start Adoption Jumbo -->
+        <div class="jumbotron jumbotron-fluid ">
+            <!-- Start Actualité Section -->
+            <div class="container padding-section">
+                <div class="text-center mt-4">
+                    <div class="text-center content-section">
+                        <h2 class="display-5">Animaux a adopter</h2>
+                        <div class="custom-underline mx-auto my-4"></div>
+                        <p class="lead w-75 mx-auto">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Sit molestias totam culpa quos ad laborum saepe,
+                            aperiam laudantium vero eaque quisquam nesciunt, tempora
+                            quas repudiandae nulla voluptas blanditiis veritatis
+                            porro eius modi. Iusto sapiente mollitia officiis
+                            cupiditate ullam sequi voluptatibus?
+                        </p>
+                    </div>
+                    <!-- Start Carousel -->
+                    <div class="owl-carousel owl-theme text-center pt-4">
+                        <!-- Start Card -->
+                        <div class="card m-2">
+                            <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                                <img class="image" src="../images/pet_images/Oiseaux4.jpg" alt="Donald Duck"/>
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text px-3 pb-3">
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </p>
+                                <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+        
+                        <!-- Start Card -->
+                        <div class="card m-2">
+                            <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                                <img class="image" src="../images/pet_images/Chiens1.jpg" alt="Donald Duck">
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text px-3 pb-3">
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </p>
+                                <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+        
+                        <!-- Start Card -->
+                        <div class="card m-2">
+                            <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                                <img class="image" src="../images/pet_images/Autre1.jpg" alt="Donald Duck">
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text px-3 pb-3">
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </p>
+                                <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+        
+                        <!-- Start Card -->
+                        <div class="card m-2">
+                            <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                                <img class="image" src="../images/pet_images/Lapin3.jpg" alt="Donald Duck">
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text px-3 pb-3">
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </p>
+                                <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+                    </div>                    
+                    <!-- End Carousel -->
+                </div>
+            </div>
+            <!-- End Actualité Section -->
+        </div>
+        <!-- End Adoption Jumbo -->
+
+        <!-- Start Actualité Section -->
+        <div class="container padding-section">
+            <div class="text-center mt-4">
+                <div class="text-center content-section">
+                    <h2 class="display-5">Dernieres actualités</h2>
+                    <div class="custom-underline mx-auto my-4"></div>
+                    <p class="lead w-75 mx-auto">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Sit molestias totam culpa quos ad laborum saepe,
+                        aperiam laudantium vero eaque quisquam nesciunt, tempora
+                        quas repudiandae nulla voluptas blanditiis veritatis
+                        porro eius modi. Iusto sapiente mollitia officiis
+                        cupiditate ullam sequi voluptatibus?
+                    </p>
+                </div>
+                <!-- Start Carousel -->
+                <div class="owl-carousel owl-theme text-center pt-4">
+                    <!-- Start Card -->
+                    <div class="card m-2">
+                        <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                            <img class="image" src="../images/pet_images/Oiseaux4.jpg" alt="Donald Duck"/>
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text px-3 pb-3">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                            <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+    
+                    <!-- Start Card -->
+                    <div class="card m-2">
+                        <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                            <img class="image" src="../images/pet_images/Chiens1.jpg" alt="Donald Duck">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text px-3 pb-3">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                            <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+    
+                    <!-- Start Card -->
+                    <div class="card m-2">
+                        <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                            <img class="image" src="../images/pet_images/Autre1.jpg" alt="Donald Duck">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text px-3 pb-3">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                            <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+    
+                    <!-- Start Card -->
+                    <div class="card m-2">
+                        <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                            <img class="image" src="../images/pet_images/Lapin3.jpg" alt="Donald Duck">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                            <h5 class="card-title">Card title Deco</h5>
+                            <p class="card-text px-3 pb-3">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                            <button type="button" class="btn py-3 btn-link">Go Somewhere</button>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                </div>                    
+                <!-- End Carousel -->
+            </div>
+        </div>
+        <!-- End Actualité Section -->
+
+        <!-- Start Footer Section -->
+        <footer class="bg-color-footer">
+            <div class="container px-4 padding-section">
+                <div class="row">
+                    <div class="widget-group col-md-6 col-lg-3">
+                        <h4 class="widget-title border-bottom">
+                            A propos
+                        </h4>
+                        <p class="widget-paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Possimus, et! Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </div>
+                    <div class="widget-group col-md-6 col-lg-3">
+                        <h4 class="widget-title border-bottom">
+                            Liens Rapides
+                        </h4>
+                        <ul class="widget-list">
+                            <li><a href="">Liens</a></li>
+                            <li><a href="">Liens</a></li>
+                            <li><a href="">Liens</a></li>
+                            <li><a href="">Liens</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget-group col-md-6 col-lg-3">
+                        <h4 class="widget-title border-bottom">
+                            Nous contacter
+                        </h4>
+                        <div class="widget-paragraph">
+                            <p class="widget-paragraph">00 Rue Completer<br />00000 Lieu en France</p>
+                            <strong>Contact Info</strong>
+                            <p class="widget-paragraph">(+00) 000 000 000<br/>contact@nomdusite.com</p>
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-twitter-square"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-reddit-square"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="widget-group col-md-6 col-lg-3">
+                        <h4 class="widget-title border-bottom">
+                            Newsletter
+                        </h4>
+                        <div class="widget-paragraph">
+                            <div class="input-group pt-3 mb-3">
+                                <input type="text" class="form-control" placeholder="Entrez votre email" aria-label="Entrez votre email" aria-describedby="basic-addon2"/>
+                                <div class="input-group-append newsletter-btn">
+                                    <i class="btn fas fa-arrow-alt-circle-right"></i>
+                                        <!-- <button <button class=" btn-outline-light p-0" type="button">
+                                    </button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer text-center mt-5">
+                <p class="widget-paragraph"><span class="signature-author">Made with <i class='fa fa-heart'></i> by <a href="#">Marie</a> & <a href="https://www.cedricpaje.fr">Cédric</a></span></p>
+            </div>
+        </footer>
+        <!-- End Footer Section -->
+
+        <!--- Start Top Scroll -->
+        <a href="#home" class="top-scroll"><i class="fas fa-angle-up"></i></a>
+        <!--- End Top Scroll -->
+
+        <!-- Start Script Source Files -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="https://kit.fontawesome.com/dd72eb03ec.js" crossorigin="anonymous"></script>
+        <script src="../bootstrap-4.4.1/dist/js/bootstrap.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/jquery.counterup.js"></script>
+        <script src="../js/jquery.waypoints.min.js"></script>
+        <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+        <script src="../js/waypoints.js"></script>
+        <!-- End Script Source Files -->
+    </body>
+</html>

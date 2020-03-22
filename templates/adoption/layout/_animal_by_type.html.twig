@@ -1,0 +1,38 @@
+{# Start Categories  #}
+<div class="container py-4 px-2 padding-section">
+	<div class="text-center content-section">
+		<h2 class="display-5 mt-3">Catégorie {{type.name|capitalize}}
+		</h2>
+		<div class="custom-underline mx-auto my-4"></div>
+	</div>
+	<div
+		class="d-flex flex-wrap justify-content-center">
+
+		{% for animal in animals %}
+		{# Start Loop Categories  #}
+
+			<div class="card mx-2 mb-4" style="width: 350px">
+				<div class="crop-picture carousel-img d-flex align-items-center mb-2">
+					<img class="image" src="{{ asset('uploads/' ~ animal.image) }}" alt="Animal image"/>
+					<div class="overlay"></div>
+				</div>
+				<div class="card-body px-0 pb-0 text-center card-deco card-body-carousel">
+					<h5 class="card-title test-font font-weight-bold"> Adopter {{ animal.name }}</h5>
+					<p class="card-title test-font "> Age : {{ animal.age }} an(s)</p>
+					<p class="card-title test-font">Sexe : {{ animal.sex }}</p>
+					<p class="card-title test-font">
+						Départment : {{ animal.department.name }}
+					</p>
+					<a href="{{ path('animal_view', {id: animal.id}) }}" class="btn py-3 btn-link">En savoir plus</a>
+				</div>
+			</div>
+		{% endfor %}
+		{# End Loop Categories  #}
+	    {# display navigation #}
+		</div>
+    <div class="navigation">
+        {{ knp_pagination_render(animals) }}
+    </div>
+</div>
+{# End Categories  #}
+

@@ -1,0 +1,51 @@
+{# Start Contact Form  #}
+<div class="container-fluid text-center">
+    <div class="container padding-section px-3">
+        <div class="content-section">
+            <h2 class="display-5"><i class="far fa-envelope"></i> Nous Contacter</h2>
+            <div class="custom-underline mx-auto my-4"></div>
+            <p class="lead mx-auto w-75">
+                Vous avez une question? Besoin d'un renseignement ? N'hésitez pas a nous contacter !
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container container-fluid form-container">
+    <form method="post" id="contactForm" class="w-75 mx-auto mb-5 text-right">
+        <div class="form-group">
+            <input name ="name" required="required" type="text" class="form-control" placeholder="Entrez votre Nom">
+        </div>
+        
+        <div class="form-group">
+            <input name ="email" required="required" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre email">
+        </div>
+        
+        <div class="form-group">
+            <textarea name ="message" required="required" class="form-control" id="exampleFormControlTextarea1" placeholder="Ajoutez un message..." rows="6"></textarea>
+        </div>
+        <button type="submit" name="submit"  class="btn btn-secondary">Envoyer</button>
+        <input type="hidden" id="g-token" name="gtoken">
+    </form>
+</div>
+
+{# Start Contact Form  #}
+<div class="container-fluid text-center">
+    <div class="container padding-section px-3">
+        <div class="content-section">
+            <h2 class="display-5"><i class="fas fa-paw"></i> Contacter les associations</h2>
+            <div class="custom-underline mx-auto my-4"></div>
+            <p class="text-footer-login-form text-center"> Pour contacter les associations <a href="{{ path('association') }}">C'est par ici !</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LcMPuIUAAAAAD6MCAn6blNVI7M5VKHZ_YXnN1KB"></script>
+<script>
+grecaptcha.ready(function() {
+	grecaptcha.execute('6LcMPuIUAAAAAD6MCAn6blNVI7M5VKHZ_YXnN1KB', {action: 'homepage'}).then(function(token) {
+		document.getElementById("g-token").value = token
+	});
+});
+</script>
+

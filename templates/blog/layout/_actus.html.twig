@@ -1,0 +1,41 @@
+{# Start Actualité Section #}
+<div class="container-fluid ">
+    {# Start Jumbotron's Container #}
+    <div class="container padding-section text-center">
+        <div class="text-center content-section">
+            <h2 class="display-5">Les derniers articles publiés</h2>
+            <div class="custom-underline mx-auto my-4"></div>
+            <p class="lead w-75 mx-auto">
+                Consulter les dernières actualités du Blog
+            </p>
+        </div>
+
+        {# Start Carousel  #}
+        <div class="owl-carousel owl-theme text-center pt-4">
+            {% for article in articles %}
+            {% set img_link = article.getMedia().getImgLink()%}
+            {# Start Card  #}
+            <div class="card m-2">
+                <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                    <img class="image" src="{{ asset('uploads/' ~ img_link) }}" alt="Article Pictures"/>
+                    <div class="overlay"></div>
+                </div>
+                <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                    <h5 class="card-title box--fixed one-line font-color font-weight-bold ">{{ article.title|capitalize }}</h5>
+                    {% for category in article.categories %}
+                        <span class="badge badge-article mb-3"><a href="{{ path('article_list_by_category', {id: category.id}) }}">{{ category.name|capitalize }}</a></span>
+                    {% endfor %}
+                    <p class="card-text box--responsive px-3 pb-3">
+                        {{ article.content }}
+                    </p>
+                    <a href="{{ path('article_view', {slug: article.slug}) }}" class="btn py-3 btn-link">Lire la suite</a>
+                </div>
+            </div>
+            {# End Card  #}
+            {% endfor %}        
+        </div>                    
+        {# End Carousel  #}
+    </div>
+    {# End Jumbotron's Container  #}
+</div>
+{# End Actualité Section  #}

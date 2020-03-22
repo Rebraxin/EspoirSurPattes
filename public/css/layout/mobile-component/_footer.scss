@@ -1,0 +1,102 @@
+.about-anchor {
+    color: var(--main-font-color);
+    text-decoration: underline;
+}
+.bg-color-footer {
+    background-color: var(--main-main-color);
+    color: var(--main-white-color);
+}
+
+.widget-group {
+    margin: 2rem 0;
+}
+
+.widget-title {
+    font-family: var(--main-text-font);
+    border-bottom: 1px solid var(--main-footer-color);
+    color: var(--main-footer-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+}
+
+.widget-paragraph {
+    font-family: var(--main-text-font);
+    color: var(--main-footer-color);
+    font-size: .8rem;
+}
+
+.widget-paragraph a {
+    text-decoration: none;
+}
+
+.widget-paragraph .fab {
+    color: var(--main-footer-color);
+    font-size: 1.5rem;
+    margin-right: 5px;
+    transition: all .4s;
+}
+.widget-paragraph .fab:hover {
+    color: var(--main-white-color);
+}
+
+.widget-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.widget-list a {
+    font-family: var(--main-text-font);
+    transition: all .4s;
+    color: var(--main-footer-color);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.widget-list a:hover {
+    color: var(--main-white-color);
+}
+
+.form-control-footer {
+    background-color: var(--main-footer-color);
+}
+
+.newsletter-btn .fas {
+    color: var(--main-footer-color);
+    border: 1px solid var(--main-footer-color);
+    font-size: 1.5rem;
+    padding: .3rem .8rem;
+    transition: all .4s;
+}
+
+.newsletter-btn .fas:hover {
+    color: var(--main-white-color);
+    background-color: var(--main-main-color);
+}
+
+
+.bottom-footer {
+    background-color: var(--main-hover-color);
+    padding: 1.5rem 0;
+}
+
+.signature-author {
+    color: var(--main-footer-color);
+    font-size: .9rem;
+}
+
+.signature-author  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--main-footer-color);
+    transition: all .4s;
+}
+
+.signature-author  a:hover {
+    color: var(--main-white-color);
+}
+
+.fa-heart {
+    // color: var(--main-clear-color);
+    color: #e74c3c;
+}

@@ -1,0 +1,31 @@
+{# Start Categories  #}
+<div class="container py-4 px-2 padding-section">
+    <div class="text-center content-section">
+        <h2 class="display-5 mt-3">Toutes les catégories d'animaux</h2>
+        <div class="custom-underline mx-auto my-4"></div>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center">
+
+        {# Start Loop Categories  #}
+        {% for type in types %}
+
+            <div class="card mx-2 mb-4" style="width: 350px">
+                <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                    <img class="image" src="{{ asset('images/animal_type/' ~ type.name ~ '.jpg') }}" alt="Animal Pictures"/>
+                    <div class="overlay"></div>
+                </div>
+                <div class="card-body px-0 pb-0 text-center card-deco card-body-carousel">
+                    <h5 class="card-title box--fixed one-line font-color font-weight-bold">{{ type.name|capitalize}}</h5>
+                    <p class="card-text box--responsive px-3 pb-3">
+                    Voir tout les animaux de la catégorie {{ type.name}} proposés a l'adoption par les associations partenaires
+                    </p>
+                    <a href="{{ path('animal_list_by_type', {id: type.id}) }}" class="btn py-3 btn-link">Voir tout les animaux</a>
+                </div>
+            </div>
+
+        {% endfor %}
+        {# End Loop Categories  #}
+    
+    </div>  
+</div>
+{# End Categories  #}

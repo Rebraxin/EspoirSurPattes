@@ -1,0 +1,38 @@
+#myMap {
+    height: 600px;
+    margin-bottom: 5rem;
+}
+
+.contact-adress {
+    height: 500px;
+    
+    div {
+        
+        p, strong {
+            color: var(--main-font-color);
+        }
+    }
+}
+
+.form-container {
+
+    form {
+
+        input, textarea {
+            border: 1px solid var(--main-main-color);
+        }
+
+        button {
+            background: var(--main-white-color);
+            color: var(--main-main-color);
+            border: 1px solid var(--main-main-color);
+            transition: all .4s;
+        }
+        
+        button:hover {
+            background: var(--main-main-color);
+            color: var(--main-white-color);
+            border: 1px solid var(--main-main-color);            
+        }
+    }
+}

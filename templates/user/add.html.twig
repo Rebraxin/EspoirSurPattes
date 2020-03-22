@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un compte | EspoirsurPattes{% endblock %}
+
+{% block body %}
+
+    {% include "user/layout/_form_banner.html.twig" %}
+
+
+    {{ form_start(formAddUser, {'attr': {'class': 'container signup-container'}}) }}
+        <div class="login-container-children">
+            <div class="shadow-login-form">
+                <div class="login-form-header text-center">
+                    <div class="circle-icon-signup d-inline-flex">
+                        <i class="far fa-address-card"></i>            
+                    </div>
+                    <h3>S'enregistrer</h3>        
+                </div>
+
+                <div class="border-outter p-3">
+
+                    <div class="form-error">
+                        <p class="info-form m-0 p-0">Email</p>
+                        {{ form_errors(formAddUser.firstname) }}
+                        {{ form_widget(formAddUser.firstname, {
+                            'attr': {
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}
+                    </div>
+                    
+                    <div class="form-error">
+                        <p class="info-form m-0 p-0">Nom</p>
+                        {{ form_errors(formAddUser.lastname) }}
+                        {{ form_widget(formAddUser.lastname, {
+                            'attr': {
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}
+                    </div>
+
+                    <div class="form-error">
+                        <p class="info-form m-0 p-0">Pseudo</p>
+                        {{ form_errors(formAddUser.username) }}
+                        {{ form_widget(formAddUser.username, {
+                            'attr': {
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}
+                    </div>
+
+                    <div class="form-error">
+                        <p class="info-form m-0 p-0">Email</p>
+                        {{ form_errors(formAddUser.email) }}
+                        {{ form_widget(formAddUser.email, {
+                            'attr': {
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}
+                    </div>
+                    <div class="form-error">
+                        <p class="info-form m-0 p-0">Mot de passe<span class="text-muted"> (min. 8 caractères)</span></p>
+                        {{ form_errors(formAddUser.plain_password.first) }}
+                        {{ form_widget(formAddUser.plain_password.first, {
+                            'attr': {
+                                'class': 'select-rows mt-1',
+                            }
+                        }) }}                        
+                    </div>
+
+                    <p class="info-form m-0 p-0">Confirmation mot de passe</p>
+                    {{ form_widget(formAddUser.plain_password.second, {
+                            'attr': {
+                                'class': 'select-rows',
+                            }
+                    }) }}
+
+                    <div class="login-btn-holder text-center">
+                        {{ form_widget(formAddUser.Enregistrer, {
+                            'label': 'S\'inscrire',
+                            'attr': {
+                                'class': 'select-rows form-btn',
+                                'type': 'submit'
+                            }
+                        }) }}
+                    </div>
+                    <p class="text-footer-login-form text-center">Déja enregistré ? <a href="{{ path ('app_login') }}">Se connecter ici</a></p>
+                </div>
+                <input type="hidden" id="g-token" name="gtoken">
+                <div class="footer-login-form"></div>
+            </div>
+
+        </div>
+
+
+
+    {{ form_end(formAddUser) }}
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LcMPuIUAAAAAD6MCAn6blNVI7M5VKHZ_YXnN1KB"></script>
+<script>
+grecaptcha.ready(function() {
+	grecaptcha.execute('6LcMPuIUAAAAAD6MCAn6blNVI7M5VKHZ_YXnN1KB', {action: 'homepage'}).then(function(token) {
+		document.getElementById("g-token").value = token
+	});
+});
+</script>
+
+{% endblock %}

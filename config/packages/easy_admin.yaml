@@ -1,0 +1,25 @@
+easy_admin:
+    entities:
+        User:
+            class: App\Entity\User
+        Animal:
+            class: App\Entity\Animal
+        Type:
+            class: App\Entity\Type
+        Article:
+            class: App\Entity\Article
+            # label: "Article"
+            # form:
+            #     fields:
+            #         - { property: 'categories', type_options: { by_reference: false} }
+                        # Traiter champ par champ afin de pouvoir editer les categories
+        Category:
+            class: App\Entity\Category
+        Comment:
+            class: App\Entity\Comment
+        Department:
+            class: App\Entity\Department
+        Media:
+            class: App\Entity\Media
+        Region:
+            class: App\Entity\Region

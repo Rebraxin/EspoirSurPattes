@@ -1,0 +1,28 @@
+@media only screen and (min-width: 1023px) {
+    
+    @import 'desktop-component/ellipsis';
+    @import 'desktop-component/navbar';
+    
+    .card-banner .card-title {
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-shadow: 1px 4px 8px #242323;
+        font-size: 2.8rem;
+    }
+    
+    .card-banner .card-text {
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-shadow: 1px 4px 8px #242323;
+        font-size: 1.1rem;
+    }
+
+    @import 'desktop-component/widget_home';
+
+    .widget-home-group {
+        padding: 0 2.5rem;
+    }
+
+    @import 'desktop-component/signup_form';
+    @import 'desktop-component/solo_article';
+    @import 'desktop-component/map';
+    @import 'desktop-component/github_section';    
+}

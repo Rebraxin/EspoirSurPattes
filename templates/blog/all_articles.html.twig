@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Articles par catégories{% endblock %}
+
+{% block body %}
+
+    {% include "blog/layout/_blog_banner.html.twig" %} 
+
+    {% include "main/layout/_widget.html.twig" %}
+
+    {% include "blog/layout/_all_articles.html.twig" %}    
+
+{% endblock %}

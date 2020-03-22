@@ -1,0 +1,50 @@
+.box {
+  height: 4.5em;
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  float: left;
+}
+
+.box--fixed {
+  margin: 0 auto 1rem;
+  width: 85%; 
+}
+
+.box--responsive {
+  width: 100%;
+  height: 80px;
+}
+
+.box--responsive-title {
+  width: 90%;
+  height: 40px;
+}
+
+.box--responsive-article {
+  width: 100%;
+  height: 80px;
+}
+
+/* necessary plugin styles */
+.ellip {
+  display: block;
+  height: 100%;
+}
+
+.ellip-line {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.ellip,
+.ellip-line {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}

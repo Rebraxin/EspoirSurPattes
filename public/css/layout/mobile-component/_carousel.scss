@@ -1,0 +1,92 @@
+/*======================*/
+/*====== Carousel ======*/
+/*======================*/
+.content-section h2,
+.content-section p {
+    color: var(--main-font-color);
+    font-family: var(--main-text-font);
+}
+
+.content-section h2 {
+    font-size: 1.7rem;    
+}
+
+.content-section p {
+    font-size: 1rem;    
+}
+
+.carousel-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    display: block;
+    transition: all .4s;
+}
+
+.overlay {
+    background-color: rgba($color: #4C4750, $alpha: .25);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all .4s;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.carousel-img:hover .overlay {
+    opacity: 0;
+}
+
+.carousel-img:hover .image {
+    transform: scale(1.2);
+}
+
+.card-body-carousel h5,
+.card-body-carousel p {
+    color: var(--main-font-color);
+    font-family: var(--main-text-font);
+}
+
+.card-body-carousel .btn {
+    border-top: 1px solid rgba(76, 71, 80, 0.246);
+    color: rgba(76, 71, 80, 0.89);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0;
+    width: 100%;
+    transition: all .4s ease;
+}
+
+.card-body-carousel .btn:hover {
+    background-color: var(--main-main-color);
+    color: var(--main-white-color);
+}
+
+.card-deco {
+    position: relative;
+}
+
+.card-deco:before {
+    content: "";
+    display: block;
+    height: 20px;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: calc(100%);
+    right: 0px;
+    left: 0px;
+    background-color: #fff;
+}
+
+.font-color {
+    color: var(--main-font-color);
+}
+
+
+

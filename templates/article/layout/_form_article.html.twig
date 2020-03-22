@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Espoir sur Pattes | Ajouter un article
+{% endblock %}
+
+{% block body %}
+
+	{% include "article/layout/_form_banner.html.twig" %}
+
+	{{ form_start(formArticle, {'attr': {'class': 'container px-0 article-form-container'}}) }}
+	<div class="login-container-children">
+		<div class="shadow-login-form">
+			<div class="login-form-header text-center">
+				<div class="circle-icon-signup d-inline-flex">
+					<i class="far fa-address-card"></i>
+				</div>
+				<h2>ajouter un article</h2>
+			</div>
+
+			<div class="border-outter">
+
+				<div class="form-error">
+					{{ form_errors(formArticle.title) }}
+					{{ form_widget(formArticle.title, {
+                        'attr': {
+                            'placeholder': 'Titre de l\'article',
+                            'class': 'select-rows mt-1',
+                        }
+                    }) }}
+                </div>               
+
+                <div class="form-error">
+                    {{ form_errors(formArticle.content) }}
+                    {{ form_widget(formArticle.content, {
+                        'attr': {
+                            'placeholder': 'Contenu de l\'article',
+                            'class': 'select-rows mt-1',
+                            'rows': '4',
+                        }
+                    }) }}
+				</div>
+
+				<div class="custom-file form-error select-rows border-0 mt-1">
+					{{ form_errors(formArticle.media) }}
+					{{ form_widget(formArticle.media, {
+                        'attr': {
+                            'placeholder': 'Selectionner un fichier',
+                            'class': 'custom-file-label',
+                        }
+                    }) }}
+				</div>
+                
+
+				{{ form_widget(formArticle.categories, {
+                    'attr': {
+                        'class': 'select-rows border-0 mt-1 col-lg-4',
+                    }
+                }) }}
+
+				<div class="login-btn-holder text-center">
+					{{ form_widget(formArticle.Enregistrer, {
+                        'label': 'Enregistrer',
+                        'attr': {
+                            'class': 'select-rows form-btn',
+                            'type': 'submit'
+                        }
+                    }) }}
+				</div>
+                <input type="hidden" id="g-token" name="gtoken">
+			</div>
+			<div class="footer-login-form"></div>
+		</div>
+
+	</div>
+
+	{{ form_end(formArticle) }}
+<script src="https://www.google.com/recaptcha/api.js?render=6LcMPuIUAAAAAD6MCAn6blNVI7M5VKHZ_YXnN1KB"></script>
+<script>
+grecaptcha.ready(function() {
+	grecaptcha.execute('6LcMPuIUAAAAAD6MCAn6blNVI7M5VKHZ_YXnN1KB', {action: 'homepage'}).then(function(token) {
+		document.getElementById("g-token").value = token
+	});
+});
+</script>
+
+{% endblock %}

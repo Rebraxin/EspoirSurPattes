@@ -1,0 +1,45 @@
+{# Start Adoption Jumbo  #}
+<div class="jumbotron jumbotron-fluid ">
+    {# Start Actualité Section #}
+    <div class="container padding-section">
+        <div class="text-center mt-4">
+            <div class="text-center content-section">
+                <h2 class="display-5">Animaux a adopter</h2>
+                <div class="custom-underline mx-auto my-4"></div>
+                <p class="lead w-75 mx-auto">
+                   Vous souhaitez adopter un compagnon ? Vous pouvez accèder à la liste complète dans la partie Adoption du site 
+                </p>
+            </div>
+            {# Start Carousel #}
+            <div class="owl-carousel owl-theme text-center pt-4">
+                
+                {% for animalToAdopt in animalsToAdopt %}
+                {# Start Card #}
+                
+                <div class="card m-2">
+                    <div class="crop-picture carousel-img d-flex align-items-center mb-2">
+                        <img class="image" src="{{ asset('uploads/' ~ animalToAdopt.image) }}" alt="Animal Pictures"/>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body px-0 pb-0 card-deco card-body-carousel">
+                        <h5 class="card-title test-font font-weight-bold"> Adopter {{ animalToAdopt.name }}</h5>
+                        <p class="card-title test-font "> Age : {{ animalToAdopt.age }} an(s)</p>
+					    <p class="card-title test-font">Sexe : {{ animalToAdopt.sex }}</p>
+                        <p class="card-title test-font">
+                            Départment : {{ animalToAdopt.department.name }}
+                        </p>
+                        <a href="{{ path('animal_view', {id: animalToAdopt.id}) }}" class="btn py-3 btn-link">Lire la suite</a>
+                    </div>
+                </div>
+                
+                {# End Card #}
+                {% endfor %}
+
+                
+            </div>                    
+            {# End Carousel #}
+        </div>
+    </div>
+    {# End Actualité Section #}
+</div>
+{# End Adoption Jumbo  #}

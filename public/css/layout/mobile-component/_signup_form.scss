@@ -1,0 +1,95 @@
+.signup-container {
+    padding: 0;
+}
+
+.info-form {
+    color: var(--main-font-color);
+}
+
+.signin-container {
+    padding: 0;
+}
+
+.login-form-header {
+    background-color: var(--main-main-color);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    color: var(--main-white-color);
+    .circle-icon-signup {
+        border: 2px solid var(--main-white-color);
+        border-radius: 50%;
+        padding: .6rem;
+        i {
+            font-size: 1.2rem;
+        }
+    }
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 0;
+        margin-top: .5rem;
+    }
+}
+
+.select-rows {
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    border: 1px solid var(--main-main-color);
+
+    div {
+
+        .custom-file-label {
+            border: 1px solid var(--main-main-color);
+        }
+        
+        .custom-file-label::after {
+            background: var(--main-white-color);
+            transition: all .4s;
+            cursor: pointer;
+        }
+        
+        .custom-file-label:hover::after {
+            background: var(--main-main-color);
+            color: var(--main-white-color);
+            cursor: pointer;
+        }
+    }
+}
+
+.form-btn {
+    background-color: var(--main-white-color);
+    border: 1px solid var(--main-main-color);
+    border-radius: 5px !important;
+    color: var(--main-main-color);
+    width: 100%;
+    padding: .4rem 0;
+}
+
+.form-btn:hover {
+    background-color: var(--main-main-color);
+    border: 1px solid var(--main-main-color);
+    border-radius: 5px;
+    color: var(--main-white-color);
+}
+
+.card-widget-form {
+    background-color: transparent;
+    padding: 0 !important;
+    border: none;
+    color: var(--main-white-color);
+}
+
+.text-footer-login-form {
+    margin: 0 0 2rem;
+    font-size: 14px;
+    color: #7B7B7B;
+
+    a {
+        font-weight: 700;
+        color: #7B7B7B;
+    }
+
+    a:hover {
+        color: var(--main-main-color);
+    }
+}

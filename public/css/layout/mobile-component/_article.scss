@@ -1,0 +1,25 @@
+.card-body-article {
+    font-family: var(--main-text-font);
+    color: var(--main-font-color);
+    
+    .btn-article {
+        color: var(--main-main-color);
+        font-weight: 700;
+        transition: all .4s;
+        border: 1px solid var(--main-main-color);
+    }
+    
+    .btn-article:hover {
+        border: 1px solid var(--main-main-color);
+        color: var(--main-white-color);
+        background: var(--main-main-color);
+    }
+}
+
+.badge-article {
+    background:var(--main-main-color);
+
+    a {
+        color: var(--main-white-color);
+    }
+}

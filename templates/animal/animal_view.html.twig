@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ animal.name}}
+{% endblock %}
+
+{% block body %}
+
+{% include "adoption/layout/_adoption_banner.html.twig" %} 
+
+{% include "main/layout/_widget.html.twig" %}
+
+{% include "animal/layout/_animal_detail.html.twig" %}
+
+{% endblock %}

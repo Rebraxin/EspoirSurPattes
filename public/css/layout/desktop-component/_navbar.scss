@@ -1,0 +1,34 @@
+.login-holder {
+    background-color: var(--main-white-color) !important;
+
+    .btn-login {
+        color: var(--main-font-color) !important;
+        
+        i {
+            font-size: 1.4rem !important;
+        }
+    }
+
+    .btn-login:hover {
+        color: var(--main-main-color) !important;
+    }
+}
+
+.login-nav-holder {
+    max-width: 100%;
+    margin: 0;
+    padding: .3rem 1.5rem .3rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background: var(--main-white-color);
+
+    .login-nav-btn {
+        font-weight: 700;
+        font-family: var(--main-text-font);
+        
+        a {
+            color: var(--main-font-color);
+        }
+    }
+}

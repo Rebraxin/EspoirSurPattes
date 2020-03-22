@@ -1,0 +1,48 @@
+.pagination-nav {
+    margin-bottom: 1rem;
+
+    ul {
+
+        li:active, li:focus {
+            background: var(--main-main-color) !important;
+
+        }
+        
+        li {
+            
+            a {
+                border: none;
+                color: var(--main-font-color);
+                font-family: var(--main-text-font);
+                background: transparent;
+                font-weight: 700;
+                transition: all .4s;
+            }
+            
+            a:hover {
+                background:var(--main-main-color);
+                color: var(--main-white-color);
+            }
+
+            a:active, a:focus {
+                outline: none !important;
+                box-shadow: none;
+            }
+            
+        }
+
+        li .page-item .disable {
+            border: none !important;
+        }
+    }
+}
+
+.page-item.active .page-link {
+    background: var(--main-main-color) !important;
+}
+
+.page-item.active .page-link {
+    border-color: var(--main-white-color);
+    font-weight: bold;
+    // box-shadow: transparent !important;
+}

@@ -1,0 +1,20 @@
+.card-body-widget-home {
+    font-family: var(--main-text-font);
+    padding: .5rem !important;
+    font-size: 1.1rem;
+    transition: all .4s;
+}
+
+.card-body-widget-home:hover {
+    background-color: var(--main-hover-color);
+}
+
+.card-body-widget-home i {
+    font-size: 1.6rem;
+    padding-left: .1rem;
+}
+
+.widget-home-parent {
+    width: 85%;
+    height: 100px;
+}

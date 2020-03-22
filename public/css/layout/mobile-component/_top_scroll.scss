@@ -1,0 +1,21 @@
+/*========================*/
+/*====== Top Scroll ======*/
+/*========================*/
+.top-scroll i {
+    font-size: 2rem;
+    padding: 0 .5rem;
+    color: #53595F;
+    background: white;
+}
+a.top-scroll {
+    right: 1.5rem;
+    bottom: 75px;
+    position: fixed;
+    opacity: 0.3;
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.3s;
+}
+a.top-scroll:hover {
+    opacity: 0.5;
+}

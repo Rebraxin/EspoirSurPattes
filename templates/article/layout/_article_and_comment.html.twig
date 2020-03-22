@@ -1,0 +1,156 @@
+{# Start Actualité Section  #}
+<div class="container container-fluid mb-5">
+    <div class="content-section">
+        {# Start Solo Article #}
+        <div class="card border-0 mx-2">
+            <div class="card-body card-body-solo-article">
+                <div class="crop-picture-solo-article float-md-left">
+                    {% set img_link = article.getMedia().getImgLink()%}
+                     <img class="image" src="{{ asset('uploads/' ~ img_link) }}" alt="Article Pictures"/>
+                </div>
+
+                {# Start Edit Dropdown #}
+                {# {% if is_granted('ROLE_ADMIN') %} #}
+                    <div class="btn-group float-right">
+                        <button type="button" class="btn btn-comment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item text-right" type="button"><small class="text-muted"><a class="text-muted disabled" href="{{ path('signal_article',{id:article.id}) }}">Signaler<i class="fab fa-font-awesome-flag ml-1"></i></a></small></button>
+                            {% if is_granted('ROLE_USER') %}
+                            {% if is_granted ('update', article) %}
+                            <button class="dropdown-item text-right" type="button"><small class="text-muted"><a class="text-muted" href="{{ path('update_article',{id:article.id}) }}">Editer<i class="fas fa-pencil-alt ml-1"></i></a></small></button>
+                            {% endif %}
+                            {% if is_granted ('delete', article) %}
+                            <button class="dropdown-item text-right" onclick="return confirm('Confirmez la suppression ?')" type="button"><small class="text-muted"><a class="text-muted" href="{{ path('delete_article',{id:article.id}) }}">Supprimer<i class="far fa-trash-alt ml-1"></i></a></small></button>
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                {# {% endif %} #}
+                {# End Edit Dropdown #}
+
+                <h2 class="display-5 mx-2"> {{ article.title|capitalize }}</h2>
+                {% for category in article.categories %}
+                    <span class="badge badge-article mb-3"><a href="{{ path('article_list_by_category', {id: category.id}) }}">{{ category.name|capitalize }}</a></span>
+                {% endfor %}
+                <div class="crop-logo mx-2">
+                    <img src="{{asset("images/avatar/LogoRondDefinitif.png")}}" alt="" />
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <p class="card-text text-muted-solo-article date-article mx-2">
+                    <small class="text-muted">
+                        <i class="far fa-clock"></i>
+                        {% if article.updatedAt %}
+                            {{ article.updatedAt|date("d/m/Y") }}
+                        {% elseif article.createdAt %}
+                            {{ article.createdAt|date("d/m/Y") }}
+                        {% endif  %}
+                        <i class="far fa-user ml-2"></i> {{ article.user.userName }}
+                        <i class="far fa-comment ml-2"></i> {{ article.comments|length }} Commentaire(s)
+                    </small>
+                </p>
+                <p class="mx-2">{{ article.content }}</p>        
+            </div>
+        </div>
+        {# Start Solo Article  #}
+
+        <div class="card border-solo-article mt-4">
+            {# Start Loop For Comments #}
+            {% for comment in comments %}
+            <div class="row no-gutters">
+                <div class="col-md-5 col-lg-3 solo-article d-flex justify-content-center align-items-start pl-2">
+                    <div class="crop-logo p-2">
+                        <img src="{{asset("images/avatar/LogoRondDefinitif.png")}}" alt="" />
+                    </div>
+                    <div class="muted-solo-article">
+                            <p class="text-muted date-article  mb-0 pr-1">
+                                <small>
+                                    <i class="far fa-clock "></i> 
+                                    {% if comment.updatedAt %}
+                                        {{ comment.updatedAt|date("d/m/Y") }}
+                                    {% elseif comment.createdAt %}
+                                        {{ comment.createdAt|date("d/m/Y") }}
+                                    {% endif  %}
+                                </small>
+                            </p>
+                            <p class="text-muted date-article mb-0 pr-1">
+                                <small>
+                                    <i class="far fa-user"></i> {{ comment.user.userName }}
+                                </small>
+                            </p>
+                            <p class="text-muted date-article mb-0 pr-1">
+                                <small>
+                                    <i class="fas fa-hashtag"></i> 
+                                    {{ loop.index }}
+                                </small>
+                            </p>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-9">
+                    <div class="card-body comment-content p-0">
+                    {# Start Edit Dropdown #}
+                        <div class="btn-group float-right">
+                            <button type="button" class="btn btn-comment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <button class="dropdown-item text-right" type="button"><small class="text-muted"><a class="text-muted disabled" href="{{ path('signal_comment',{id:comment.id}) }}">Signaler<i class="fab fa-font-awesome-flag ml-1"></i></a></small></button>
+                                {% if is_granted('ROLE_USER') %}
+                                {% if is_granted ('update', comment) %}
+                                <button class="dropdown-item text-right" type="button"><small class="text-muted"><a class="text-muted" href="{{ path('update_comment',{id:comment.id}) }}">Editer<i class="fas fa-pencil-alt ml-1"></i></a></small></button>
+                                 {% endif %}
+                                {% if is_granted ('delete', comment) %}
+                                <button class="dropdown-item text-right" onclick="return confirm('Confirmez la suppression ?')" type="button"><small class="text-muted"><a class="text-muted" href="{{ path('delete_comment',{id:comment.id}) }}">Supprimer<i class="far fa-trash-alt ml-1"></i></a></small></button>
+                                {% endif %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {# End Edit Dropdown #}
+
+                        <p class="card-text p-3">{{ comment.content }}</p>
+                    </div>
+                   
+                </div>
+            </div>
+            {% endfor %}
+            <!-- End Loop For Comments -->
+            
+        </div>
+
+        <div class="container container-fluid form-container px-0">
+            {% if app.user %}
+                {{ form_start(formComment) }}
+                    <div class="form-error mt-4">
+                        {{ form_errors(formComment.content) }}
+                        {{ form_widget(formComment.content, {
+                            'attr': {
+                                'placeholder': 'Ajouter un commentaire...',
+                                'class': 'mb-3',
+                                'rows': '5',
+                            }
+                        }) }}
+                    </div>
+
+                    <div class="text-right">
+                        {{ form_widget(formComment.Envoyer, {
+                            'label': 'Envoyer',
+                            'attr': {
+                                'class': 'btn btn-secondary',
+                                'type': 'submit'
+                            }
+                        }) }}
+                    </div>
+                {{ form_end(formComment) }}
+            {% endif %}
+            {% if app.user == false %}
+                <div class="login-purpose">
+                    <p class="text-footer-login-form text-center mt-4">Pour poster des commentaires<br/>
+                        <a href="{{ path ('create_account') }}">Inscrivez-vous</a> ou <a href="{{ path ('app_login') }}">Connectez vous</a>!
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- End Actualité Section -->

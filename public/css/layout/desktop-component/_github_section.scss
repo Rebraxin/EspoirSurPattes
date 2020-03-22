@@ -1,0 +1,53 @@
+.github {
+    .section-inner{
+        border: 1px solid #ddd;
+        .github-graph {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.github-graph {
+    margin-bottom: 30px;
+}
+
+.github-graph .js-calendar-graph-svg {
+    max-width: 100%;
+}
+
+.github-graph h2 {
+    font-size: 18px;
+}
+
+.ghfeed {
+    height: 110px;
+    width: 99.8%;
+}
+
+.ghfeed,
+.ghfeed *,
+.ghfeed *:before,
+.ghfeed *:after {
+    box-sizing: content-box;
+}
+
+.graph-before-activity-overview {
+    color: var(--main-fony-color);
+    font-family: var(--main-text-font);
+
+    .contrib-footer {
+
+        div {
+
+            a {
+                font-weight: 700;
+                color: var(--main-font-color);
+                transition: all .4s;
+            }
+            
+            a:hover {
+                color: var(--main-main-color);
+            }
+        }
+    }
+}

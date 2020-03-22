@@ -1,0 +1,110 @@
+/*============================*/
+/*====== BannerHeadline ======*/
+/*============================*/
+.banner-headline-home {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url('../images/banners/banner-home.jpeg');
+    background-size: cover;
+    background-position: 25% 25%;
+    margin-top: 67px;
+    width: 100%;
+    height: 350px;
+}
+
+.banner-headline-blog {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url('../images/banners/banner-blog.jpg');
+    background-size: cover;
+    background-position: 25% 25%;
+    margin-top: 67px;
+    width: 100%;
+    height: 350px;
+}
+
+.banner-headline-contact {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url('../images/banners/banner-contact-test.jpg');
+    background-size: cover;
+    background-position: 25% 75%;
+    margin-top: 67px;
+    width: 100%;
+    height: 350px;
+}
+
+
+.banner-headline-adopt {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url('../images/banners/banner-adopt.jpg');
+    background-size: cover;
+    background-position: 25% 60%;
+    margin-top: 67px;
+    width: 100%;
+    height: 350px;
+}
+
+.banner-headline-signin {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url('../images/banners/banner-signin.jpg');
+    background-size: cover;
+    background-position: 25% 25%;
+    margin-top: 67px;
+    width: 100%;
+    height: 350px;
+}
+
+.banner-headline-card {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url('../images/banners/banner-carte.jpg');
+    background-size: cover;
+    background-position: 25% 25%;
+    margin-top: 67px;
+    width: 100%;
+    height: 350px;
+}
+
+.banner-headline-form {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,.5)100%), url('../images/banners/banner-form.jpg');
+    background-size: cover;
+    background-position: 25% 50%;
+    margin-top: 67px;
+    width: 100%;
+    height: 350px;
+}
+
+.banner-headline-shelter {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,.5)100%), url('../images/banners/banner-shelter.jpg');
+    background-size: cover;
+    background-position: 25% 50%;
+    margin-top: 67px;
+    width: 100%;
+    height: 350px;
+}
+
+.card-banner {
+    background-color: transparent;
+    color: var(--main-white-color);
+    padding: 0;
+    border: none;
+}
+
+.card-banner .card-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-shadow: 1px 4px 8px #242323;
+    font-size: 2rem;
+}
+
+.card-banner .card-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-shadow: 1px 4px 8px #242323;
+    font-size: .9rem;
+}
+
+.card-banner .btn {
+    border: 2px solid var(--main-white-color);
+    background-color: transparent;
+    padding: .3rem 1.3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all .4s;
+}
+
+.card-banner .btn:hover {
+    background-color: var(--main-white-color);
+    text-shadow: 0px 0px 0px #242323;
+    color: var(--main-main-color);
+    border-radius: 50px;
+}

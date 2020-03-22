@@ -1,0 +1,123 @@
+.signup-container {
+    position: relative;
+    padding-top: 0;
+    max-width: 40%;
+    height: 900px;
+}
+
+.new-password {
+    position: relative;
+    padding-top: 0;
+    max-width: 40%;
+    height: 500px;
+}
+
+.animal-form-container {
+    position: relative;
+    padding-top: 0;
+    max-width: 40%;
+    height: 1100px;
+}
+
+.article-form-container {
+    position: relative;
+    padding-top: 0;
+    max-width: 40%;
+    height: 875px;
+}
+
+.signin-container {
+    position: relative;
+    padding-top: 0;
+    max-width: 40%;
+    height: 650px;
+}
+
+
+
+.login-container-children {
+    position: absolute;
+    margin-top: -70px;
+    width: 100%;
+}
+
+.select-rows {
+    margin: 0 0 1.5rem;
+    width: 100%;
+}
+
+.shadow-login-form {
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px #242323;
+}
+
+.login-form-header {
+    color: var(--main-white-color);
+    margin-bottom: 0;
+    background-color: var(--main-main-color);
+    border: 1px solid var(--main-main-color);
+    border-radius: 10px 10px 0 0;
+    padding: 1rem;
+    h3 {
+       font-family: var(--main-text-font);
+       text-transform: uppercase;
+       margin-bottom: 0;
+       margin-top: .4rem;
+    }
+}
+
+.circle-icon-signup {
+    border: 3px solid var(--main-white-color);
+    border-radius: 50px;
+    padding: .75rem;
+
+    i {
+        font-size: 1.5rem;
+    }
+}
+
+.border-outter {
+    margin: 0 auto;
+    padding: 3rem 2.5rem 2rem;
+    border: .3rem solid var(--main-main-color);
+    border-bottom: none;
+    border-radius: 0;
+}
+
+.form-btn {
+    border: 1px solid var(--main-main-color);
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: var(--main-white-color);
+    color: var(--main-main-color);
+    margin: 1rem 0 0 0;
+}
+
+.form-btn:hover {
+    border: 1px solid var(--main-main-color);
+    border-radius: 10px;
+    background-color: var(--main-main-color);
+}
+
+.text-footer-login-form {
+    margin: 2rem 0 0;
+    font-size: 14px;
+    color: #7B7B7B;
+
+    a {
+        font-weight: 700;
+        color: #7B7B7B;
+    }
+
+    a:hover {
+        color: var(--main-main-color);
+    }
+}
+
+.footer-login-form {
+    height: 70px;
+    background-color: var(--main-main-color);
+    border: 1px solid var(--main-main-color);
+    border-radius: 0 0 10px 10px;
+}
